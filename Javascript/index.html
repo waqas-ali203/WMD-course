@@ -3,10 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="function.js"></script>
+    <!-- <script src="script.js"></script> -->
+
+    <style>
     
-    <title>Document</title>
+            button {
+                background-color: rgb(82, 82, 219);
+                margin: 10px;
+                padding: 10px;
+                border-radius: 10px;
+            }
+        
+    </style>
+    
+    <title>Learning JavaScript</title>
 </head>
 <body>
-    <script src="script.js"></script>
+    <!-- Question 1 -->
+  <h2>1. Find Maximum Between Two Numbers</h2>
+  <input type="number" id="question1-number1" placeholder="Enter first number">
+  <input type="number" id="question1-number2" placeholder="Enter second number">
+  <button onclick="findMax()">Check</button>
+  <p id="question1-result"></p>
+
+  <!-- Question 2 -->
+  <h2>2. Find Maximum Between Three Numbers</h2>
+  <input type="number" id="question2-number1" placeholder="Enter first number">
+  <input type="number" id="question2-number2" placeholder="Enter second number">
+  <input type="number" id="question2-number3" placeholder="Enter third number">
+  <button onclick="findMaxThree()">Check</button>
+  <p id="question2-result"></p>
+
+  <!-- Question 3 -->
+  <h2>3. Check if a Number is Negative, Positive, or Zero</h2>
+  <input type="number" id="question3-number" placeholder="Enter a number">
+  <button onclick="checkSign()">Check</button>
+  <p id="question3-result"></p>
+
+  <!-- Question 4 -->
+  <h2>4. Check if a Number is Divisible by 5 and 11</h2>
+  <input type="number" id="question4-number" placeholder="Enter a number">
+  <button onclick="checkDivisibility()">Check</button>
+  <p id="question4-result"></p>
+
+  <!-- Question 5 -->
+  <h2>5. Check if a Number is Even or Odd</h2>
+  <input type="number" id="question5-number" placeholder="Enter a number">
+  <button onclick="checkEvenOdd()">Check</button>
+  <p id="question5-result"></p>
+
+  <!-- Question 6 -->
+  <h2>6. Check if a Year is a Leap Year</h2>
+  <input type="number" id="question6-number" placeholder="Enter a year">
+  <button onclick="checkLeapYear()">Check</button>
+  <p id="question6-result"></p>
+
+  <!-- Question 7 -->
+  <h2>7. Check if a Character is an Alphabet</h2>
+  <input type="text" id="question7-number" placeholder="Enter a character" maxlength="1">
+  <button onclick="isAlphabet()">Check</button>
+  <p id="question7-result"></p>
+
+  <!-- Question 9 -->
+  <h2>9. Check Character Type</h2>
+  <input type="text" id="question9-number" placeholder="Enter a character" maxlength="1">
+  <button onclick="checkCharacterType()">Check</button>
+  <p id="question9-result"></p>
+
+  <!-- Question 10 -->
+  <h2>10. Check if Alphabet is Uppercase or Lowercase</h2>
+  <input type="text" id="question10-number" placeholder="Enter a character" maxlength="1">
+  <button onclick="checkCase()">Check</button>
+  <p id=question10-result"></p>
+
+  <!-- Question 14 -->
+  <h2>14. Check if Triangle is Valid (by Angles)</h2>
+  <input type="number" id="question14-number1" placeholder="Enter first angle">
+  <input type="number" id="question14-number2" placeholder="Enter second angle">
+  <input type="number" id="question14-number3" placeholder="Enter third angle">
+  <button onclick="checkTriangleAngles()">Check</button>
+  <p id="question14-result"></p>
+
+  <!-- Question 15 -->
+  <h2>15. Check if Triangle is Valid (by Sides)</h2>
+  <input type="number" id="question15-number1" placeholder="Enter first side">
+  <input type="number" id="question15-number2" placeholder="Enter second side">
+  <input type="number" id="question15-number3" placeholder="Enter third side">
+  <button onclick="checkTriangleSides()">Check</button>
+  <p id=question15-result"></p>
+
+  <!-- Question 16 -->
+  <h2>16. Check Triangle Type</h2>
+  <input type="number" id="question16-number1" placeholder="Enter first side">
+  <input type="number" id="question16-number2" placeholder="Enter second side">
+  <input type="number" id="question16-number3" placeholder="Enter third side">
+  <button onclick="checkTriangleType()">Check</button>
+  <p id="question16-result"></p>
+
+  <h1>ANOTHER TOPIC</h1>
+  <p id="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit <a href="JavaScript:void(0)" onclick="expandParagraph()">Readmore</a></p>
 </body>
 </html>
