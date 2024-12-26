@@ -38,3 +38,24 @@ function swapImage(){
     image1.src = image2.src;
     image2.src = image1.src;
 }
+
+// Question 7
+
+function changeBackground(){
+    var imageBackground = document.getElementById("para");
+    imageBackground.style.backgroundColor = yellow;   
+}
+
+
+// Question 8
+
+function changeFontSize(){
+    var paras = document.getElementById("paragraphs");
+    var fonts = paras.getElementsByTagName("p");
+    // var fontSize = "18px";
+
+    for (var i = 0; i < fonts.length; i++) {
+        fonts[i].style.fontSize = "18px";
+      }
+}
+
