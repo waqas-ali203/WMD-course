@@ -39,12 +39,12 @@ function swapImage(){
     image2.src = image1.src;
 }
 
-// Question 7
+// Question 7 ....hamara is k bger b kam ho gya
 
-function changeBackground(){
-    var imageBackground = document.getElementById("para");
-    imageBackground.style.backgroundColor = yellow;   
-}
+// function changeBackground(){
+//     var imageBackground = document.getElementById("para");
+//     imageBackground.style.backgroundColor = yellow;   
+// }
 
 
 // Question 8
@@ -53,9 +53,25 @@ function changeFontSize(){
     var paras = document.getElementById("paragraphs");
     var fonts = paras.getElementsByTagName("p");
     // var fontSize = "18px";
-
+    
     for (var i = 0; i < fonts.length; i++) {
         fonts[i].style.fontSize = "18px";
-      }
+    }
+}
+
+
+// Question 9
+
+function getElements(){
+    var someList = document.getElementById("specificList");
+    // console.log(div)
+    var colorCode = document.getElementById("colorName").value;
+    // console.log(colorCode)
+    var allList = someList.getElementsByTagName("li");
+    console.log(allList);
+
+    for (var i = 0; i < 3 && i < allList.length; i++) {
+        allList[i].style.color = colorCode;
+}
 }
 
