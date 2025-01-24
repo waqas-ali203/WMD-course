@@ -1,14 +1,14 @@
 // Question1 access child nodes
 
-// function allChildNodes(){
+function allChildNodes(){
 
-//     var mainContainer = document.getElementById("main-container");
-//     console.log("All child node is ", mainContainer.childNodes);
+    var mainContainer = document.getElementById("main-container");
+    console.log("All child node is ", mainContainer.childNodes);
 
-//     var listUpdate  = document.getElementById("firstList");
-//     listUpdate.textContent = " Your first list is updated"
-// }
-// allChildNodes();
+    var listUpdate  = document.getElementById("firstList");
+    listUpdate.textContent = " Your first list is updated"
+}
+allChildNodes();
 
   
 // QUESTION2 access parent node
