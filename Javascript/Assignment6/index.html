@@ -40,6 +40,11 @@
         .form-group button:hover {
             background-color: #0056b3;
         }
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
     </style>
 </head>
 
@@ -51,28 +56,32 @@
                 <label for="full-name">Full Name</label>
                 <input type="text" id="full-name" name="full-name">
             </div>
-
+            <div id="error-message-name" class="error"></div>
+            
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email">
+                <input type="email" id="email-check" name="email" required>
             </div>
-
+            <div id="error-message-email" class="error"></div>
+            
             <div class="form-group">
                 <label for="address">Address</label>
                 <textarea id="address" name="address" rows="3"></textarea>
             </div>
-
+            <div id="error-message-address" class="error"></div>
+            
             <div class="form-group">
                 <label for="age">Age</label>
                 <input type="number" id="age" name="age">
             </div>
-
+            <div id="error-message-age" class="error"></div>
+            
             <div class="form-group">
                 <label>Gender</label>
                 <label><input type="radio" name="gender" value="male" required> Male</label>
                 <label><input type="radio" name="gender" value="female" required> Female</label>
             </div>
-
+            
             <div class="form-group">
                 <label for="course">Course Selection</label>
                 <select id="course" name="course">
@@ -82,12 +91,14 @@
                     <option value="course2">Mobile app development</option>
                 </select>
             </div>
-
+            <div id="error-message-course" class="error"></div>
+            
             <div class="form-group">
                 <label for="dob">Date of Birth</label>
                 <input type="date" id="dob" name="dob">
             </div>
-
+            <div id="error-message-date" class="error"></div>
+            
             <div class="form-group">
                 <label for="photo">Upload Photo</label>
                 <input type="file" id="photo" name="photo">
