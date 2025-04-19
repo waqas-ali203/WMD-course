@@ -1,0 +1,311 @@
+{
+	"info": {
+		"_postman_id": "5c517a16-9f30-4e10-8773-56c464acd7f0",
+		"name": "EduWiz",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26799793",
+		"_collection_link": "https://warped-equinox-727324.postman.co/workspace/Team-Workspace~26f69225-d629-4233-886f-b1711a98e08a/collection/26799793-5c517a16-9f30-4e10-8773-56c464acd7f0?action=share&source=collection_link&creator=26799793"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Forgot Password",
+					"item": [
+						{
+							"name": "Verify Email",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/auth/verify-email?email=itspersonal279@gmail.com",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"auth",
+										"verify-email"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "itspersonal279@gmail.com"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Verify OTP",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"zohan@gmail.com\",\r\n    \"otp\":\"7178\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/auth/verify-otp?email=itspersonal279@gmail.com&otp=3233",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"auth",
+										"verify-otp"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "itspersonal279@gmail.com"
+										},
+										{
+											"key": "otp",
+											"value": "3233"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Change Password",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"zohan@gmail.com\",\r\n    \"otp\":\"7178\",\r\n    \"password\":\"123456789aA#\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/auth/change-password",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"change-password"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"itspersonal2793@gmail.com\",\r\n    \"password\": \"123456789aA#\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-assessment-task.vercel.app/auth/signup",
+							"protocol": "https",
+							"host": [
+								"api-assessment-task",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"zohan@gmail.com\",\r\n  \"password\": \"abced1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/auth/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Current User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/auth/fetch-current-user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"auth",
+								"fetch-current-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Google FB Login/Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"provider\": \"facebook\",\r\n    \"name\": \"abdul hanan\",\r\n    \"providerId\": \"4546453f1f2\",\r\n    \"email\": \"\", // this is optional,\r\n    \"profileImageUrl\": \"https://media.istockphoto.com/id/1300512215/photo/headshot-portrait-of-smiling-ethnic-businessman-in-office.jpg?s=612x612&w=0&k=20&c=QjebAlXBgee05B3rcLDAtOaMtmdLjtZ5Yg9IJoiy-VY=\",\r\n    \"accessToken\": \"eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..k-FFzAqGt9pzt_qZ.lO0RmzXyuHFPqxNXeciOxIj-NezJVyg96Qim7ujoJtnbEqUIDxu5IVAO9Qy-yvs3n5h96s3KlYViXcg6umqwZ_5QvEZcjOYdR7eVzDtoPWbJyCX0eKNBSywhwWMCtMXQo2LCw_bw2CZx2bkpscdfr_iOrLqfxIlzHxsm46EmtlPXfu8pZV0.trF2zwqWUGmj573sbmYmyg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/auth/google-fb-signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"auth",
+								"google-fb-signup"
+							]
+						},
+						"description": "ff"
+					},
+					"response": [
+						{
+							"name": "Google FB Login/Signup",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"provider\": \"facebook\",\r\n    \"name\": \"abdul hanan\",\r\n    \"email\": \"\", // this is optional\r\n    \"providerId\": \"4546453f1f2\",\r\n    \"profileImageUrl\": \"https://media.istockphoto.com/id/1300512215/photo/headshot-portrait-of-smiling-ethnic-businessman-in-office.jpg?s=612x612&w=0&k=20&c=QjebAlXBgee05B3rcLDAtOaMtmdLjtZ5Yg9IJoiy-VY=\",\r\n    \"accessToken\": \"eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..k-FFzAqGt9pzt_qZ.lO0RmzXyuHFPqxNXeciOxIj-NezJVyg96Qim7ujoJtnbEqUIDxu5IVAO9Qy-yvs3n5h96s3KlYViXcg6umqwZ_5QvEZcjOYdR7eVzDtoPWbJyCX0eKNBSywhwWMCtMXQo2LCw_bw2CZx2bkpscdfr_iOrLqfxIlzHxsm46EmtlPXfu8pZV0.trF2zwqWUGmj573sbmYmyg\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/auth/google-fb-signup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"auth",
+										"google-fb-signup"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "852"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"354-gli+q8DwTSCRtdI6MaO4aDayB6g\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Oct 2024 10:26:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"success\": true,\n    \"message\": \"User signed in successfully\",\n    \"data\": {\n        \"provider\": \"facebook\",\n        \"name\": \"abdul hanan\",\n        \"providerId\": \"4546453f1f2\",\n        \"profileImageUrl\": \"https://media.istockphoto.com/id/1300512215/photo/headshot-portrait-of-smiling-ethnic-businessman-in-office.jpg?s=612x612&w=0&k=20&c=QjebAlXBgee05B3rcLDAtOaMtmdLjtZ5Yg9IJoiy-VY=\",\n        \"accessToken\": \"eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..k-FFzAqGt9pzt_qZ.lO0RmzXyuHFPqxNXeciOxIj-NezJVyg96Qim7ujoJtnbEqUIDxu5IVAO9Qy-yvs3n5h96s3KlYViXcg6umqwZ_5QvEZcjOYdR7eVzDtoPWbJyCX0eKNBSywhwWMCtMXQo2LCw_bw2CZx2bkpscdfr_iOrLqfxIlzHxsm46EmtlPXfu8pZV0.trF2zwqWUGmj573sbmYmyg\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NzE4Y2Y1M2JhNDY1MjE4N2M4MzkzMzIiLCJlbWFpbCI6IjQ1NDY0NTNmMWYyIiwiaWF0IjoxNzI5Njc5MjA3LCJleHAiOjE3Mjk2ODAxMDd9._c3APzOn0KDr43IbU_RfaR3mKFaGNDhd5E_D9AdFlaE\"\n    },\n    \"error\": null\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
