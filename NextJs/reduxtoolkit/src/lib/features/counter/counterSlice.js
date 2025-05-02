@@ -19,7 +19,7 @@ export const counterSlice = createSlice({
       state.value -= 1;
     },
     customIncrement: (state,action) => {
-      console.log("🚀 ~ act?ion:", action)
+      console.log("action", action)
       state.value = action.payload;
     },
   },
