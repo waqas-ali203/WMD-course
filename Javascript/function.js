@@ -103,5 +103,5 @@ function findMax() {
 //   Another paragraph
 
 function expandParagraph(){
-    document.getElementById("paragraph").innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem reprehenderit odio quasi, autem, beatae perspiciatis blanditiis sunt nesciunt consectetur sequi eaque id, corporis vero. Tenetur illum vel sit exercitationem reprehenderit."
+    document.getElementById("paragraph").innerHTML = "Lorem is ipsum dolor sit amet consectetur adipisicing elit. Rem reprehenderit odio quasi, autem, beatae perspiciatis blanditiis sunt nesciunt consectetur sequi eaque id, corporis vero. Tenetur illum vel sit exercitationem reprehenderit."
 }
